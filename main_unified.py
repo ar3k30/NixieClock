@@ -277,15 +277,18 @@ class NixieClockControl(QMainWindow):
                 
     def set_controls_enabled(self, enabled):
         """Włączanie/wyłączanie kontrolek"""
+        # Przyciski i slidery - wymagają połączenia
         self.time_section.set_time_btn.setEnabled(enabled)
         self.brightness_section.brightness_slider.setEnabled(enabled)
         self.dimming_section.night_brightness_slider.setEnabled(enabled)
         self.dimming_section.dim_enabled.setEnabled(enabled)
-        self.dimming_section.dim_start_time.setEnabled(enabled)
-        self.dimming_section.dim_end_time.setEnabled(enabled)
         self.schedule_section.schedule_enabled.setEnabled(enabled)
-        self.schedule_section.off_time.setEnabled(enabled)
-        self.schedule_section.on_time.setEnabled(enabled)
+        
+        # Pola czasu ZAWSZE dostępne - użytkownik może ustawić przed połączeniem
+        self.dimming_section.dim_start_time.setEnabled(True)
+        self.dimming_section.dim_end_time.setEnabled(True)
+        self.schedule_section.off_time.setEnabled(True)
+        self.schedule_section.on_time.setEnabled(True)
         
     def set_time(self):
         """Ustawienie czasu na zegarku"""

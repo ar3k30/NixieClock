@@ -159,7 +159,6 @@ class DimmingSection(QGroupBox):
         self.dim_start_time.setTime(QTime(int(h), int(m)))
         self.dim_start_time.setMinimumHeight(INPUT_HEIGHT)
         self.dim_start_time.setFixedWidth(TIME_EDIT_WIDTH)
-        self.dim_start_time.setEnabled(False)
         time_layout.addWidget(self.dim_start_time)
         
         time_layout.addSpacing(TIME_FIELDS_SPACING)
@@ -171,7 +170,6 @@ class DimmingSection(QGroupBox):
         self.dim_end_time.setTime(QTime(int(h), int(m)))
         self.dim_end_time.setMinimumHeight(INPUT_HEIGHT)
         self.dim_end_time.setFixedWidth(TIME_EDIT_WIDTH)
-        self.dim_end_time.setEnabled(False)
         time_layout.addWidget(self.dim_end_time)
         
         time_layout.addStretch()
@@ -209,7 +207,6 @@ class ScheduleSection(QGroupBox):
         self.off_time.setTime(QTime(int(h), int(m)))
         self.off_time.setMinimumHeight(INPUT_HEIGHT)
         self.off_time.setFixedWidth(TIME_EDIT_WIDTH)
-        self.off_time.setEnabled(False)
         time_layout.addWidget(self.off_time)
         
         time_layout.addSpacing(TIME_FIELDS_SPACING)
@@ -221,7 +218,6 @@ class ScheduleSection(QGroupBox):
         self.on_time.setTime(QTime(int(h), int(m)))
         self.on_time.setMinimumHeight(INPUT_HEIGHT)
         self.on_time.setFixedWidth(TIME_EDIT_WIDTH)
-        self.on_time.setEnabled(False)
         time_layout.addWidget(self.on_time)
         
         time_layout.addStretch()
